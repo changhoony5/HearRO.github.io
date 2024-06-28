@@ -92,11 +92,11 @@
       }
       
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/HearRO_Web.loader.js";
+      var loaderUrl = buildUrl + "/OX.loader.js";
       var config = {
-        dataUrl: buildUrl + "/HearRO_Web.data.unityweb",
-        frameworkUrl: buildUrl + "/HearRO_Web.framework.js.unityweb",
-        codeUrl: buildUrl + "/HearRO_Web.wasm.unityweb",
+        dataUrl: buildUrl + "/OX.data",
+        frameworkUrl: buildUrl + "/OX.framework.js",
+        codeUrl: buildUrl + "/OX.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DigitalPharm",
         productName: "HearRO",
@@ -123,7 +123,10 @@
         // performance, uncomment the following line:
         //config.devicePixelRatio = 1;
       
-        unityShowBanner('WebGL builds are not supported on mobile devices.');
+        // unityShowBanner('WebGL builds are not supported on mobile devices.');
+      } else {
+        canvas.style.width = '100%';
+        canvas.style.height = '100%';
       }
       
       loadingBar.style.display = "block";
